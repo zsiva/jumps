@@ -4,7 +4,7 @@ import STATES from '../../../constants/states';
 module.exports = angular.module('jumps.RankingController', [])
     .controller('RankingController', RankingController);
 
-function RankingController(authorData, authorService, $state) {
+function RankingController() {
     const vm = this;
 
 }

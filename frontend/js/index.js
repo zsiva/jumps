@@ -1,13 +1,10 @@
 /**
- * AngularJS Tutorial 1
- * @author Nick Kaye <nick.c.kaye@gmail.com>
+ * Jumps Page
+ * @author Marta Carrizo Ibarra
  */
 
-/**
- * Main AngularJS Web Application
- */
-var app = angular.module('jumpsPage', [
-  'ngRoute'
+const app = angular.module('jumpsPage', [
+    'ngRoute',
 ]);
 
 /**
@@ -18,9 +15,9 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Home
     .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
     // Pages
-    .when("/ranking", {templateUrl: "components/ranking/template.html", controller: "RankingController"})
+    .when("/ranking", {templateUrl: "components/ranking/template.html", controller: "PageCtrl"})
     .when("/gallery", {templateUrl: "components/gallery/template.html", controller: "PageCtrl"})
-    .when("/pricing", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
+    .when("/visited-countries", {templateUrl: "components/countries/template.html", controller: "PageCtrl"})
     .when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})
     .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
     // Blog
