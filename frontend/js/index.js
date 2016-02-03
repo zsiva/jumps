@@ -13,7 +13,7 @@ const app = angular.module('jumpsPage', [
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-    .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
+    .when("/", {templateUrl: "components/home/template.html", controller: "PageCtrl"})
     // Pages
     .when("/ranking", {templateUrl: "components/ranking/template.html", controller: "PageCtrl"})
     .when("/gallery", {templateUrl: "components/gallery/template.html", controller: "PageCtrl"})
