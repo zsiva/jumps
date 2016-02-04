@@ -61,12 +61,11 @@
 	__webpack_require__(6);
 	__webpack_require__(8);
 
-	var app = angular.module('jumpsPage', ['ui.router', 'ui.bootstrap', 'slugifier', __webpack_require__(28).name, __webpack_require__(9).name, __webpack_require__(12).name]);
+	var app = angular.module('jumpsPage', ['ui.router', 'ui.bootstrap', 'slugifier', __webpack_require__(28).name, __webpack_require__(9).name, __webpack_require__(12).name, __webpack_require__(31).name]);
 	app.config(setUpRoutes);
 
 	function setUpRoutes($stateProvider, $locationProvider) {
 	    $locationProvider.html5Mode(true);
-	    console.log(_states2.default.GALLERY);
 	    $stateProvider.state(_states2.default.GALLERY, {
 	        url: _routes2.default.GALLERY,
 	        template: __webpack_require__(13),
@@ -55703,6 +55702,28 @@
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <h1 class=\"page-header\">Visted Countries</h1>\n            <ol class=\"breadcrumb\">\n                <li><a href=\"../index.html\">Home</a>\n                </li>\n                <li class=\"active\">Visted Countries</li>\n            </ol>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            MAP\n        </div>\n    </div>\n\n</div>\n<!-- /.container -->\n";
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _lodash = __webpack_require__(10);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
+	var _states = __webpack_require__(2);
+
+	var _states2 = _interopRequireDefault(_states);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = angular.module('jumps.countriesController', []).controller('countriesController', countriesController);
+
+	function countriesController() {
+	    var vm = this;
+	}
 
 /***/ }
 /******/ ]);

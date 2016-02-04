@@ -12,14 +12,13 @@ const app = angular.module('jumpsPage', [
     'slugifier',
     require('./../components/navigation').name,
     require('./../components/gallery').name,
-    require('./../components/ranking').name
-
+    require('./../components/ranking').name,
+    require('./../components/countries').name
 ]);
 app.config(setUpRoutes);
 
 function setUpRoutes ($stateProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
-    console.log(STATES.GALLERY);
     $stateProvider
         .state(STATES.GALLERY, {
             url: ROUTES.GALLERY,
