@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import STATES from '../../../constants/states';
 
-module.exports = angular.module('jumps.CountriesController', [])
-    .controller('CountriesController', CountriesController);
+module.exports = angular.module('jumps.countriesController', [])
+    .controller('countriesController', countriesController);
 
-function CountriesController() {
+function countriesController() {
     const vm = this;
 
 }

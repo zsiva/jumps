@@ -10,6 +10,7 @@ const app = angular.module('jumpsPage', [
     'ui.router',
     'ui.bootstrap',
     'slugifier',
+    require('./../components/navigation').name,
     require('./../components/gallery').name,
     require('./../components/ranking').name
 
@@ -32,6 +33,18 @@ function setUpRoutes ($stateProvider, $locationProvider) {
             url: ROUTES.RANKING,
             template: require('./../components/ranking/template.html'),
             controller: 'rankingController',
+            controllerAs: 'vm',
+            params: {
+              bookSlug: '',
+              bookId: ''
+            },
+            resolve: {
+            }
+        })
+        .state(STATES.COUNTRIES, {
+            url: ROUTES.COUNTRIES,
+            template: require('./../components/countries/template.html'),
+            controller: 'countriesController',
             controllerAs: 'vm',
             params: {
               bookSlug: '',

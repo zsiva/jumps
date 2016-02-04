@@ -61,7 +61,7 @@
 	__webpack_require__(6);
 	__webpack_require__(8);
 
-	var app = angular.module('jumpsPage', ['ui.router', 'ui.bootstrap', 'slugifier', __webpack_require__(9).name, __webpack_require__(12).name]);
+	var app = angular.module('jumpsPage', ['ui.router', 'ui.bootstrap', 'slugifier', __webpack_require__(28).name, __webpack_require__(9).name, __webpack_require__(12).name]);
 	app.config(setUpRoutes);
 
 	function setUpRoutes($stateProvider, $locationProvider) {
@@ -77,6 +77,16 @@
 	        url: _routes2.default.RANKING,
 	        template: __webpack_require__(27),
 	        controller: 'rankingController',
+	        controllerAs: 'vm',
+	        params: {
+	            bookSlug: '',
+	            bookId: ''
+	        },
+	        resolve: {}
+	    }).state(_states2.default.COUNTRIES, {
+	        url: _routes2.default.COUNTRIES,
+	        template: __webpack_require__(30),
+	        controller: 'countriesController',
 	        controllerAs: 'vm',
 	        params: {
 	            bookSlug: '',
@@ -55648,6 +55658,51 @@
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <h1 class=\"page-header\">Ranking between our Jumpers</h1>\n            <ol class=\"breadcrumb\">\n                <li><a href=\"../index.html\">Home</a>\n                </li>\n                <li class=\"active\">Ranking</li>\n            </ol>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n        <table class=\"table table-bordered\">\n            <tbody>\n                <tr>\n                    <th width=\"130\">Jumper</th>\n                    <th class=\"center_rank\">Points</th>\n                    <th class=\"center_rank\">Jumps</th>\n                    <th class=\"center_rank\">Likes</th>\n                    <th width=\"450\">Countries</th>\n                </tr>\n                <tr>\n                    <td class=\"jumper\">\n                        Juan Carrizo Ibarra <span class=\"info_icon\"></span>\n                    </td>\n                    <td>1436</td>\n                    <td>184</td>\n                    <td>691</td>\n                    <td class=\"country\">Countries</td>\n                </tr>\n                <tr>\n                    <td class=\"jumper\">\n                        Vicen Carrizo Ibarra <span class=\"info_icon\"></span>\n                    </td>\n                    <td>456</td>\n                    <td>45</td>\n                    <td>252</td>\n                    <td class=\"country\">Countries</td>\n\n                </tr>\n                <tr>\n                    <td class=\"jumper\">\n                        Marta Carrizo Ibarra <span class=\"info_icon\"></span>\n                    </td>\n                    <td>851</td>\n                    <td>140</td>\n                    <td>301</td>\n                    <td class=\"country\">Countries</td>\n\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    </div>\n\n</div>\n<!-- /.container -->\n";
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _states = __webpack_require__(2);
+
+	var _states2 = _interopRequireDefault(_states);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	module.exports = angular.module('books.navigation', []).directive('navigation', navigation);
+
+	function navigation() {
+	    return {
+	        restrict: 'E',
+	        bindToController: true,
+	        controllerAs: 'vm',
+	        scope: {},
+	        template: __webpack_require__(29),
+	        controller: navigationController
+	    };
+	}
+
+	function navigationController() {
+	    var vm = this;
+
+	    vm.rankingState = _states2.default.RANKING;
+	    vm.galleryState = _states2.default.GALLERY;
+	    vm.countriesState = _states2.default.COUNTRIES;
+	}
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\">\n    <div class=\"container\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"#/\">Jumps</a>\n        </div>\n        <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a ui-sref=\"{{vm.rankingState}}\">Ranking</a></li>\n                <li><a ui-sref=\"{{vm.galleryState}}\">Gallery</a></li>\n                <li><a href=\"{{vm.countriesState}}\">Visited Countries</a></li>\n            </ul>\n        </div>\n    </div>\n</nav>\n";
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <h1 class=\"page-header\">Visted Countries</h1>\n            <ol class=\"breadcrumb\">\n                <li><a href=\"../index.html\">Home</a>\n                </li>\n                <li class=\"active\">Visted Countries</li>\n            </ol>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-lg-12\">\n            MAP\n        </div>\n    </div>\n\n</div>\n<!-- /.container -->\n";
 
 /***/ }
 /******/ ]);
