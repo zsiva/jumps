@@ -18,8 +18,6 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/ranking", {templateUrl: "components/ranking/template.html", controller: "PageCtrl"})
     .when("/gallery", {templateUrl: "components/gallery/template.html", controller: "PageCtrl"})
     .when("/visited-countries", {templateUrl: "components/countries/template.html", controller: "PageCtrl"})
-    .when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})
-    .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
