@@ -1,5 +1,4 @@
-import _ from 'lodash';
-//import STATES from '../../../constants/states';
+import GALLERY from '../../data/gallery';
 
 module.exports = angular.module('jumps.galleryController', [])
     .controller('galleryController', galleryController);
@@ -7,4 +6,5 @@ module.exports = angular.module('jumps.galleryController', [])
 function galleryController() {
     const vm = this;
 
+    vm.gallery = GALLERY.ITEMS;
 }
