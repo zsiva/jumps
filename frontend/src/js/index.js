@@ -6,6 +6,8 @@ require('angular-slugify');
 import ROUTES from './../constants/routes';
 import STATES from './../constants/states';
 
+import SLIDER from './../data/slides';
+
 const app = angular.module('jumpsPage', [
     'ui.router',
     'ui.bootstrap',
@@ -25,38 +27,29 @@ function setUpRoutes ($stateProvider, $locationProvider) {
             url: ROUTES.GALLERY,
             template: require('./../components/gallery/template.html'),
             controller: 'galleryController',
-            controllerAs: 'vm',
-            resolve: {
-            }
+            controllerAs: 'vm'
         })
         .state(STATES.RANKING, {
             url: ROUTES.RANKING,
             template: require('./../components/ranking/template.html'),
             controller: 'rankingController',
-            controllerAs: 'vm',
-            params: {
-              bookSlug: '',
-              bookId: ''
-            },
-            resolve: {
-            }
+            controllerAs: 'vm'
         })
         .state(STATES.COUNTRIES, {
             url: ROUTES.COUNTRIES,
             template: require('./../components/countries/template.html'),
             controller: 'countriesController',
-            controllerAs: 'vm',
-            params: {
-              bookSlug: '',
-              bookId: ''
-            },
-            resolve: {
-            }
+            controllerAs: 'vm'
         })
         .state('index', {
             url: '/',
             template: require('./../components/home/template.html'),
             controller: 'homeController',
             controllerAs: 'vm',
+            resolve: {
+                slides: function () {
+                    return SLIDER.SLIDES;
+                },
+            }
         });
 }

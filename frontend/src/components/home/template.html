@@ -1,58 +1,11 @@
-
 <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-      <uib-slide ng-repeat="slide in vm.slides" active="slide.active" index="slide.id">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+    <uib-slide ng-repeat="slide in vm.slides" active="slide.active" index="slide.id">
+        <img ng-src="{{slide.img}}" style="margin:auto;">
         <div class="carousel-caption">
-          <h4>Slide {{slide.id}}</h4>
-          <p>{{slide.text}}</p>
+            <h4>{{slide.title}}</h4>
         </div>
-      </uib-slide>
-    </uib-carousel>
-
-<!-- <div id="myCarousel" class="carousel slide">
-
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('images/slider/Paris.png');"></div>
-            <div class="carousel-caption">
-                <h2>Marta, Juan and Vicen in Paris, France</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('images/slider/1.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Nacho en Valencia</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('images/slider/2.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Marta en Berlin</h2>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('images/slider/3.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Capitan en Chernobil</h2>
-            </div>
-        </div>
-    </div>
-
-
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-</div> -->
+    </uib-slide>
+</uib-carousel>
 
 <div class="section-colored">
     <div class="container">
