@@ -16,7 +16,7 @@ function navigation() {
 function navigationController() {
     const vm = this;
 
-    vm.rankingState = STATES.RANKING;
-    vm.galleryState = STATES.GALLERY;
-    vm.countriesState = STATES.COUNTRIES;
+    vm.rankingUrl = STATES.RANKING;
+    vm.galleryUrl = STATES.GALLERY;
+    vm.countriesUrl = STATES.COUNTRIES;
 }
