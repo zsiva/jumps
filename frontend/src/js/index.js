@@ -13,7 +13,8 @@ const app = angular.module('jumpsPage', [
     require('./../components/navigation').name,
     require('./../components/gallery').name,
     require('./../components/ranking').name,
-    require('./../components/countries').name
+    require('./../components/countries').name,
+    require('./../components/home').name
 ]);
 app.config(setUpRoutes);
 
@@ -54,6 +55,8 @@ function setUpRoutes ($stateProvider, $locationProvider) {
         })
         .state('index', {
             url: '/',
-            template: 'Hello'
+            template: require('./../components/home/template.html'),
+            controller: 'homeController',
+            controllerAs: 'vm',
         });
 }
