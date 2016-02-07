@@ -1,4 +1,5 @@
 import STATES from '../../constants/states';
+let logo = require('../../images/logo.png');
 
 module.exports = angular.module('jumps.navigation', []).directive('navigation', navigation);
 
@@ -19,4 +20,6 @@ function navigationController() {
     vm.rankingUrl = STATES.RANKING;
     vm.galleryUrl = STATES.GALLERY;
     vm.countriesUrl = STATES.COUNTRIES;
+
+    vm.logo = logo;
 }
