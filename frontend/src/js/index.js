@@ -1,7 +1,6 @@
 require('angular');
 require('angular-ui-router');
 require('angular-ui-bootstrap');
-require('angular-slugify');
 
 import ROUTES from './../constants/routes';
 import STATES from './../constants/states';
@@ -11,7 +10,6 @@ import SLIDER from './../data/slides';
 const app = angular.module('jumpsPage', [
     'ui.router',
     'ui.bootstrap',
-    'slugifier',
     require('./../components/navigation').name,
     require('./../components/footer').name,
     require('./../components/gallery').name,

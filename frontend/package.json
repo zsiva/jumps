@@ -3,17 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "author": "Marta Carrizo Ibarra",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.8",
     "lodash": "^3.10.1"
   },
   "devDependencies": {
-    "angular-slugify": "^1.0.1",
     "angular-ui-bootstrap": "^0.14.3",
     "angular-ui-router": "^0.2.15",
     "babel-core": "^6.2.1",
