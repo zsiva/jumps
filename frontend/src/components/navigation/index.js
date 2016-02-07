@@ -1,6 +1,6 @@
 import STATES from '../../constants/states';
 
-module.exports = angular.module('books.navigation', []).directive('navigation', navigation);
+module.exports = angular.module('jumps.navigation', []).directive('navigation', navigation);
 
 function navigation() {
     return {
