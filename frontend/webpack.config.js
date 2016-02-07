@@ -7,23 +7,35 @@ module.exports = {
     },
     resolve: {
         root: __dirname + '/src',
-        extensions: ['', '.js', 'jpg']
+        extensions: ['', '.js', 'jpg', '.json']
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.(js)$/,
+                exclude: /node_modules/,
+                loader: 'jshint-loader'
+
+            }
+        ],
         loaders: [
             {
                 test: /\.js?$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'babel?presets[]=es2015' // 'babel-loader' is also a legal name to reference
+                loader: 'babel-loader',
+                query: {
+                    cacheDirectory: true,
+                    presets: ['es2015']
+                }
             },
             {
                 test: /\.html$/,
                 loader: 'html'
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|svg|json)$/i,
                 loaders: [
-                    'file?hash=sha512&digest=hex&name=[hash].[ext]',
+                    'file?hash=sha512&digest=hex&name=./build/assets/[name].[ext]',
                     'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
                 ]
             }
