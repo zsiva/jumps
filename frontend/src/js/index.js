@@ -13,6 +13,7 @@ const app = angular.module('jumpsPage', [
     'ui.bootstrap',
     'slugifier',
     require('./../components/navigation').name,
+    require('./../components/footer').name,
     require('./../components/gallery').name,
     require('./../components/ranking').name,
     require('./../components/countries').name,
