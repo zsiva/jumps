@@ -6,5 +6,5 @@ module.exports = angular.module('jumps.galleryController', [])
 function galleryController() {
     const vm = this;
 
-    vm.gallery = GALLERY.ITEMS;
+    vm.galleryRows = _.chunk(GALLERY.ITEMS, GALLERY.items_row);
 }
