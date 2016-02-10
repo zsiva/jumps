@@ -5,7 +5,10 @@ require('angular-ui-bootstrap');
 import ROUTES from './../constants/routes';
 import STATES from './../constants/states';
 
-import SLIDER from './../data/slides';
+//css
+import './../scss/main.css';
+import './../scss/main.scss';
+import './../scss/layout.scss';
 
 const app = angular.module('jumpsPage', [
     'ui.router',
@@ -44,11 +47,6 @@ function setUpRoutes ($stateProvider, $locationProvider) {
             url: '/',
             template: require('./../components/home/template.html'),
             controller: 'homeController',
-            controllerAs: 'vm',
-            resolve: {
-                slides: function () {
-                    return SLIDER.SLIDES;
-                },
-            }
+            controllerAs: 'vm'
         });
 }
