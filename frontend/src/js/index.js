@@ -6,8 +6,8 @@ import ROUTES from './../constants/routes';
 import STATES from './../constants/states';
 
 //css
-import './../scss/main.css';
 import './../scss/main.scss';
+import './../scss/override_bootstrap.scss';
 import './../scss/layout.scss';
 
 const app = angular.module('jumpsPage', [
