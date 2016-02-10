@@ -1,13 +1,20 @@
-var config = {
-  entry: {
-      'app': './src/js/index.js'
-  },
-  output: {
-      path: './build',
-      filename: '[name].js'
-  },
-  resolve: { alias: {} },
+var path = require('path');
 
+var config = {
+    context: __dirname + "/src",
+    entry:  {
+        'app': './js/index.js'
+    },
+    output: {
+        path: "./build",
+        publicPath: "./build/",
+        filename: "app.js"
+    },
+
+  resolve: {
+      root: __dirname + '/src',
+      extensions: ['', '.js', 'jpg', '.json']
+  },
   module: {
       preLoaders: [
           {
@@ -28,11 +35,12 @@ var config = {
               loader: 'html'
           },
           {
-              test: /\.(jpe?g|png|gif|svg|json)$/i,
-              loaders: [
-                  'file?hash=sha512&digest=hex&name=./assets/[name].[ext]',
-                  'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-              ]
+              test: /\.(jpe?g|png|gif|svg)$/,
+              loader: 'url-loader?limit=8192&name=assets/[name].[ext]'
+          },
+          {
+              test: /\.(scss|css)$/,
+              loader: 'style!css!sass!!autoprefixer-loader?browsers=last 2 version'
           }
       ]
   }
