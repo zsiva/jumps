@@ -9,5 +9,4 @@ function homeController() {
 
   vm.slides = SLIDER.SLIDES;
   vm.galleryRows = _.chunk(GALLERY.ITEMS, GALLERY.items_row_home);
-  console.log(vm.galleryRows);
 }
