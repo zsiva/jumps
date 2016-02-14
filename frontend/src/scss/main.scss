@@ -1,34 +1,3 @@
-.polaroids {
-    overflow: hidden;
-    background-image: url(../images/gallery/wood.jpg);
-   .picture {
-        background: #FFF none repeat scroll 0% 0%;
-        display: table;
-        margin-bottom: 20px;
-        width: auto;
-        padding: 10px 10px 15px;
-        text-align: center;
-        font-family: "Marker Felt",sans-serif;
-        font-size: 18px;
-        margin: 10px auto;
-        transform: rotate(-2deg);
-        &:after {
-          content: attr(title);
-        }
-    }
-    .polaroid-item {
-        &:nth-child(even){
-            transform: rotate(3deg);
-        }
-        &:nth-child(5n) {
-          transform: rotate(5deg);
-        }
-        &:nth-child(8n) {
-            transform: rotate(-3deg);
-        }
-    }
-}
-
-.gallery-section {
-    margin-bottom: 20px;
-}
+@import './custom.scss';
+@import './layout.scss';
+@import './override_bootstrap.scss';
