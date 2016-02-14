@@ -8,14 +8,14 @@
         <div class="col-lg-12">
             <table class="table table-bordered">
                 <tbody>
-                    <tr>
+                    <tr class="bg-primary">
                         <th width="130">Jumper</th>
                         <th class="center_rank">Points</th>
                         <th class="center_rank">Jumps</th>
                         <th class="center_rank">Likes</th>
                         <th width="450">Countries</th>
                     </tr>
-                    <tr ng-repeat="jumper in vm.jumpers">
+                    <tr ng-repeat="jumper in vm.jumpers" ng-class-even="'bg-info'">
                         <td class="jumper">
                             {{jumper.name}} <span class="info_icon"></span>
                         </td>
