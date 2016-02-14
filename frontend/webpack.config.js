@@ -1,20 +1,39 @@
-var path = require('path');
+var path = require('path'),
+    webpack = require("webpack");
+
+
+var node_dir = path.join(__dirname, '/node_modules/'),
+    custom_js_dir = path.join(__dirname + '/src/js/');
 
 var config = {
-    context: __dirname + "/src",
+    context: path.join(__dirname, '/src'),
     entry:  {
         'app': './js/index.js'
     },
     output: {
-        path: "./build",
+        path: path.join(__dirname, '/build'),
         publicPath: "./build/",
         filename: "app.js"
     },
 
   resolve: {
-      root: __dirname + '/src',
-      extensions: ['', '.js', 'jpg', '.json']
+      root:path.join(__dirname, '/src'),
+      extensions: ['', '.js', 'jpg', '.json'],
+      alias: {
+            vmap: node_dir + "jqvmap/jqvmap/jquery.vmap.min",
+            world_map: node_dir + "jqvmap/jqvmap/maps/jquery.vmap.world",
+            custom_map: custom_js_dir + "main",
+            jquery: node_dir + "jquery/dist/jquery"
+        }
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
+  ],
   module: {
       preLoaders: [
           {
