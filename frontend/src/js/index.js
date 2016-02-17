@@ -7,11 +7,6 @@ import STATES from './../constants/states';
 
 import './../scss/main.scss';
 
-import MAP from './../js/maps/custom_map';
-
-require('vmap');
-require('world_map');
-
 const app = angular.module('jumpsPage', [
     'ui.router',
     'ui.bootstrap',
