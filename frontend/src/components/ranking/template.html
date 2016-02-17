@@ -9,11 +9,11 @@
             <table class="table table-bordered">
                 <tbody>
                     <tr class="bg-primary">
-                        <th width="130">Jumper</th>
-                        <th class="center_rank">Points</th>
-                        <th class="center_rank">Jumps</th>
-                        <th class="center_rank">Likes</th>
-                        <th width="450">Countries</th>
+                        <th>Jumper</th>
+                        <th>Points</th>
+                        <th>Jumps</th>
+                        <th>Likes</th>
+                        <th>Countries</th>
                     </tr>
                     <tr ng-repeat="jumper in vm.jumpers" ng-class-even="'bg-info'">
                         <td class="jumper">
@@ -23,7 +23,7 @@
                         <td>{{jumper.jumps}}</td>
                         <td>{{jumper.likes}}</td>
                         <td class="country">
-                            <span ng-repeat="country in jumper.countries">{{country.name}} </span>
+                            <span ng-class="country.class" ng-repeat="country in jumper.countries"></span>
                         </td>
                     </tr>
                 </tbody>
