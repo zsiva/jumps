@@ -33,6 +33,11 @@ var config = {
       'window.jQuery': 'jquery'
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, [/moment$/]),
+    new webpack.optimize.UglifyJsPlugin({
+        output: {
+            comments: false
+          }
+    })
   ],
   module: {
       preLoaders: [
