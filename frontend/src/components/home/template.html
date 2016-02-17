@@ -1,7 +1,6 @@
 <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
     <uib-slide ng-repeat="slide in vm.slides" active="slide.active" index="slide.id" class="slider-size">
         <img ng-src="{{slide.img}}" style="margin:auto;">
-        <div style="background-image: url({{item.img}})"></div>
         <div class="carousel-caption">
             <h4>{{slide.title}}</h4>
         </div>

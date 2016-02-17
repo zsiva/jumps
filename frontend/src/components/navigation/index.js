@@ -20,6 +20,7 @@ function navigationController() {
     vm.rankingUrl = STATES.RANKING;
     vm.galleryUrl = STATES.GALLERY;
     vm.countriesUrl = STATES.COUNTRIES;
+    vm.homeUrl = STATES.HOME;
 
     vm.logo = logo;
 }
