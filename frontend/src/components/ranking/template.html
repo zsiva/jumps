@@ -23,7 +23,7 @@
                         <td>{{jumper.jumps}}</td>
                         <td>{{jumper.likes}}</td>
                         <td class="country">
-                            <span title="country.name" ng-class="country.class" ng-repeat="country in jumper.countries"></span>
+                            <div ng-attr-title="{{country.name}}" ng-class="country.class" ng-repeat="country in jumper.countries"></div>
                         </td>
                     </tr>
                 </tbody>

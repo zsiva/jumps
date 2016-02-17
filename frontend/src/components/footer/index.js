@@ -1,4 +1,3 @@
-
 module.exports = angular.module('jumps.footer', []).directive('footer', footer);
 
 function footer() {
@@ -7,11 +6,6 @@ function footer() {
         bindToController: true,
         controllerAs: 'vm',
         scope: {},
-        template: require('./template.html'),
-        controller: footerController
+        template: require('./template.html')
     };
-}
-
-function footerController() {
-    const vm = this;
 }
