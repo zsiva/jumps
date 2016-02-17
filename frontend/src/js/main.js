@@ -47,7 +47,6 @@ var sample_data = {"ar":"1","at":"1","au":"1","be":"1","bg":"1","bo":"1","br":"1
 
     $(window).on("resize", sizeMap);
 
-
   });
 
 })(jQuery);

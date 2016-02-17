@@ -7,6 +7,11 @@ import STATES from './../constants/states';
 
 import './../scss/main.scss';
 
+import MAP from './../js/maps/custom_map';
+
+require('vmap');
+require('world_map');
+
 const app = angular.module('jumpsPage', [
     'ui.router',
     'ui.bootstrap',
@@ -40,8 +45,8 @@ function setUpRoutes ($stateProvider, $locationProvider) {
             controller: 'countriesController',
             controllerAs: 'vm'
         })
-        .state('index', {
-            url: '/',
+        .state(STATES.HOME, {
+            url: ROUTES.HOME,
             template: require('./../components/home/template.html'),
             controller: 'homeController',
             controllerAs: 'vm'
