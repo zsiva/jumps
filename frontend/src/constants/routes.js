@@ -1,7 +1,6 @@
 export default {
-    HOME: '/home',
+    HOME: '/',
     GALLERY: '/gallery',
     COUNTRIES: '/visited-countries',
-    RANKING: '/ranking',
-    NOT_FOUND: '/404'
+    RANKING: '/ranking'
 };
