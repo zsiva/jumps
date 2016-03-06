@@ -9,6 +9,7 @@
             <table class="table table-bordered">
                 <tbody>
                     <tr class="bg-primary">
+                        <th>P</th>
                         <th>Jumper</th>
                         <th>Points</th>
                         <th>Jumps</th>
@@ -16,6 +17,9 @@
                         <th>Countries</th>
                     </tr>
                     <tr ng-repeat="jumper in vm.jumpers" ng-class-even="'bg-info'">
+                        <td class="jumper">
+                            {{$index + 1}}
+                        </td>
                         <td class="jumper">
                             {{jumper.name}}
                             <i ng-class="jumper.tooltip ? 'fa fa-info-circle' : 'hidden'"></i>
