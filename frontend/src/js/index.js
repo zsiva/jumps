@@ -41,7 +41,7 @@ function setUpRoutes ($stateProvider, $locationProvider) {
             controllerAs: 'vm'
         })
         .state(STATES.HOME, {
-            url: '/',
+            url: ROUTES.HOME,
             template: require('./../components/home/template.html'),
             controller: 'homeController',
             controllerAs: 'vm'
