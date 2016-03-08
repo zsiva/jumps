@@ -1,5 +1,6 @@
 .polaroids {
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
    .picture {
         background: #000 none repeat scroll 0% 0%;
         color: #FFF;
