@@ -18,10 +18,12 @@
                     </tr>
                     <tr ng-repeat="jumper in vm.jumpers" ng-class-even="'bg-info'">
                         <td class="jumper">
-                            {{$index + 1}}
+                            <span>{{$index + 1}}</span>
+                            <i ng-class="jumper.position ? (jumper.position + ' fa') : 'hidden'"></i>
                         </td>
                         <td class="jumper">
-                            {{jumper.name}}
+                            <div title="{{jumper.nationality[0].name}}" class="left {{jumper.nationality[0].class}}"></div>
+                            <div class="left">{{jumper.name}}</div>
                             <i ng-class="jumper.tooltip ? 'fa fa-info-circle' : 'hidden'"></i>
                         </td>
                         <td>{{jumper.points}}</td>
