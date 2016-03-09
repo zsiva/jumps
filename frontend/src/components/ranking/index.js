@@ -7,5 +7,5 @@ module.exports = angular.module('jumps.rankingController', [])
 function rankingController() {
     const vm = this;
 
-    vm.jumpers = _(JUMPS.JUMPERS).omit(_.isUndefined).omit(_.isNull).value();
+    vm.jumpers = _.values(JUMPS.JUMPERS);
 }
