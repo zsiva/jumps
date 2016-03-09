@@ -38,3 +38,13 @@
     position: absolute;
     background-color: #fff;
 }
+
+.map-wrapper {
+    position: relative;
+}
+.flag-counter {
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    z-index: 1;
+}
