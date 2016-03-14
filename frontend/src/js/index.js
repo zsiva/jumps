@@ -13,7 +13,7 @@ const app = angular.module('jumpsPage', [
     require('./../components/modal').name,
     require('./../components/navigation').name,
     require('./../components/footer').name,
-    require('./../components/gallery').name,
+    require('./../components/gallery/directive').name,
     require('./../components/ranking').name,
     require('./../components/countries').name,
     require('./../components/home').name
@@ -25,9 +25,7 @@ function setUpRoutes ($stateProvider, $locationProvider) {
     $stateProvider
         .state(STATES.GALLERY, {
             url: ROUTES.GALLERY,
-            template: require('./../components/gallery/template.html'),
-            controller: 'galleryController',
-            controllerAs: 'vm'
+            template: require('./../components/gallery/template.html')
         })
         .state(STATES.RANKING, {
             url: ROUTES.RANKING,

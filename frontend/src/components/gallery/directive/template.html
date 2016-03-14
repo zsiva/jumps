@@ -1,0 +1,11 @@
+<div class="row">
+    <div ng-repeat="item in vm.items">
+        <div class="clearfix" ng-if="$index % vm.rowitems == 0"></div>
+        <div class="{{vm.rowclass}}">
+            <div title="{{item.title}}" class="picture" ng-if="vm.type === 'gallery'">
+                <img class="img-responsive" src="{{item.img}}">
+            </div>
+            <img ng-if="vm.type === 'home'" src="{{item.img}}" class="thumbnail img-responsive" title="{{item.title}}">
+        </div>
+    </div>
+</div>
