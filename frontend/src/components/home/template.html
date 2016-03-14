@@ -28,11 +28,7 @@
             <h2>Some of our jumpers</h2>
             <hr>
         </div>
-        <div class="row" ng-repeat="row in vm.galleryRows">
-            <div class="col-sm-3 col-xs-6" ng-repeat="item in row">
-                <img src="{{item.img}}" class="thumbnail img-responsive" title="{{item.title}}">
-            </div>
-        </div>
+        <gallery rowclass="'col-sm-4 col-xs-12'" rowitems="3" type="'home'"></gallery>
     </div>
     <div class="row">
         <div class="col-xs-12 text-center">

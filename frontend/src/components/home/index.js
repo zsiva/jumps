@@ -9,6 +9,5 @@ function homeController() {
   const vm = this;
 
   vm.slides = SLIDER.SLIDES;
-  vm.galleryRows = _.chunk(GALLERY.ITEMS, GALLERY.items_row_home);
   vm.galleryUrl = STATES.GALLERY;
 }

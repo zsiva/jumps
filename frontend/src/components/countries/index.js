@@ -1,5 +1,4 @@
 import DATA from '../../data/map_data';
-
 require('vmap');
 require('world_map');
 
@@ -9,7 +8,7 @@ module.exports = angular.module('jumps.countriesController', [])
 function countriesController() {
     let wrapper = angular.element('.map-wrapper'),
         containerWidth = wrapper.width() - 200,
-        containerHeight = _.ceil(containerWidth / 1.4);
+        containerHeight = Math.ceil(containerWidth / 1.4);
 
     wrapper.append('<div id="vmap" style="width: '+ containerWidth + '; height: ' + containerHeight + 'px;"></div>');
 
