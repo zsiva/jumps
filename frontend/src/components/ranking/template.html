@@ -16,26 +16,34 @@
                 <table class="table table-bordered">
                     <tr class="bg-primary">
                         <th>P</th>
-                        <th>Jumper</th>
+                        <th colspan=2>Jumper</th>
                         <th>Points</th>
                         <th>Jumps</th>
                         <th>Likes</th>
-                        <th>Countries</th>
+                        <th class="hidden-xs hidden-sm">Countries</th>
                     </tr>
-                    <tr ng-repeat="jumper in vm.jumpers | orderBy: sort | filter:vm.search:strict" ng-class-even="'bg-info'">
-                        <td class="jumper">
+                    <tr ng-repeat-start="jumper in vm.jumpers | orderBy: sort | filter:vm.search:strict" ng-class-even="'bg-info'">
+                        <td>
                             <span>{{$index + 1}}</span>
                             <i ng-class="jumper.position ? (jumper.position + ' fa') : 'hidden'"></i>
                         </td>
-                        <td class="jumper">
+                        <td>
                             <div title="{{jumper.nationality[0].name}}" class="left {{jumper.nationality[0].class}}"></div>
-                            <div class="left">{{jumper.name}}</div>
-                            <i ng-class="jumper.tooltip ? 'fa fa-info-circle' : 'hidden'"></i>
+                        </td>
+                        <td>
+                            <div class="left">{{jumper.name}}&nbsp;</div>
+                            <i ng-class="jumper.tooltip ? 'fa fa-info-circle' : 'hidden'" ng-click="vm.openInfoBox(jumper.name)"></i>
                         </td>
                         <td>{{jumper.points}}</td>
                         <td>{{jumper.jumps}}</td>
                         <td>{{jumper.likes}}</td>
-                        <td class="country">
+                        <td class="country hidden-xs hidden-sm">
+                            <div ng-attr-title="country.name" ng-class="country.class" ng-repeat="country in jumper.countries"></div>
+                        </td>
+                    </tr>
+                    <tr ng-repeat-end class="visible-xs visible-sm" ng-class-even="'bg-info'">
+                        <td colspan="2">Countries</td>
+                        <td class="country" colspan="4">
                             <div ng-attr-title="country.name" ng-class="country.class" ng-repeat="country in jumper.countries"></div>
                         </td>
                     </tr>
