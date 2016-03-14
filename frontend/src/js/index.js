@@ -10,6 +10,7 @@ import './../scss/main.scss';
 const app = angular.module('jumpsPage', [
     'ui.router',
     'ui.bootstrap',
+    require('./../components/modal').name,
     require('./../components/navigation').name,
     require('./../components/footer').name,
     require('./../components/gallery').name,
