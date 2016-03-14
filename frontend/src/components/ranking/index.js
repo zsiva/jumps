@@ -1,4 +1,3 @@
-import values from "lodash/values";
 import JUMPS from '../../data/jumpers';
 
 module.exports = angular.module('jumps.rankingController', [])
@@ -7,7 +6,7 @@ module.exports = angular.module('jumps.rankingController', [])
 function rankingController($uibModal) {
     const vm = this;
 
-    vm.jumpers = values(JUMPS.JUMPERS);
+    vm.jumpers = JUMPS.JUMPERS;
 
     vm.getJumperInfo = function (name) {
         return vm.jumpers.find(jumper => jumper.name === name);

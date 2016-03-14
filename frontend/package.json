@@ -6,8 +6,7 @@
   "author": "Marta Carrizo Ibarra",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.4.8",
-    "lodash": "^4.0.0"
+    "angular": "^1.4.8"
   },
   "devDependencies": {
     "angular-ui-bootstrap": "^0.14.3",
@@ -16,9 +15,7 @@
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
-    "compass-loader": "0.0.4",
     "css-loader": "^0.23.1",
-    "file-loader": "^0.8.5",
     "html-loader": "^0.3.0",
     "jquery": "^2.2.0",
     "jqvmap": "^1.0.1",
