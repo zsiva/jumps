@@ -1,8 +1,7 @@
 var path = require('path'),
     webpack = require("webpack");
 
-
-var node_dir = path.join(__dirname, '/node_modules/'),
+var node_dir = path.join(__dirname, '../node_modules/'),
     custom_js_dir = path.join(__dirname + '/src/js/');
 
 var config = {
