@@ -20,8 +20,8 @@ var config = {
       root:path.join(__dirname, '/src'),
       extensions: ['', '.js', 'jpg', '.json'],
       alias: {
-            vmap: node_dir + "jqvmap/jqvmap/jquery.vmap.min",
-            world_map: node_dir + "jqvmap/jqvmap/maps/jquery.vmap.world",
+            vmap: custom_js_dir + "jquery.vmap",
+            world_map: custom_js_dir + "jquery.vmap.world",
             custom_map: custom_js_dir + "main",
             jquery: node_dir + "jquery/dist/jquery"
         }
