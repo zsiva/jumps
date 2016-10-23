@@ -1,12 +1,11 @@
-import JUMPS from '../../data/jumpers';
+import {jumpers} from '../../data/jumpers';
 
 module.exports = angular.module('jumps.rankingController', [])
     .controller('rankingController', rankingController);
 
 function rankingController($uibModal) {
     const vm = this;
-
-    vm.jumpers = JUMPS.JUMPERS;
+    vm.jumpers = jumpers;
 
     vm.getJumperInfo = function (name) {
         return vm.jumpers.find(jumper => jumper.name === name);
