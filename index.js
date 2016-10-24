@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.use('/build', express.static(path.join(__dirname, '/frontend/build')));
 
+app.use('/assets', express.static(path.join(__dirname, '/frontend/build/assets')));
 app.use('/src/css',express.static(path.join(__dirname, '/frontend/src/css')));
 
 app.get('/*', function(req, res) {

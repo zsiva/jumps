@@ -11,7 +11,6 @@ var config = {
     },
     output: {
         path: path.join(__dirname, '/build'),
-        publicPath: "./build/",
         filename: "app.js"
     },
 
