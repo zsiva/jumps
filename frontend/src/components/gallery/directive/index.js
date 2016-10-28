@@ -1,4 +1,4 @@
-import GALLERY from '../../../data/gallery';
+import {galleryItems} from '../../../data/gallery';
 
 module.exports = angular.module('jumps.gallery', []).directive('gallery', gallery);
 
@@ -20,5 +20,5 @@ function gallery() {
 function galleryController() {
     const vm = this;
 
-    vm.items = GALLERY.ITEMS;
+    vm.items = galleryItems;
 }

@@ -1,4 +1,4 @@
-import DATA from '../../data/map_data';
+import {visitedCountries} from '../../data/map_data';
 require('vmap');
 require('world_map');
 
@@ -18,7 +18,7 @@ function countriesController() {
         hoverOpacity: null,
         normalizeFunction: 'linear',
         scaleColors:  ['#FF4040', '#FE4040'],
-        values: DATA.countriesVisited,
+        values: visitedCountries,
         showTooltip: true
     });
 
