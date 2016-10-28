@@ -15,6 +15,7 @@ app.use('/build', express.static(path.join(__dirname, '/frontend/build')));
 
 app.use('/assets', express.static(path.join(__dirname, '/frontend/build/assets')));
 app.use('/src/css',express.static(path.join(__dirname, '/frontend/src/css')));
+app.use('/images',express.static(path.join(__dirname, '/frontend/src/images')));
 
 app.get('/*', function(req, res) {
   res.sendFile('frontend/index.html' , { root : __dirname});
