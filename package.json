@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:frontend && nodemon index.js",
+    "start": "npm run build:frontend && nodemon server.js",
     "build:frontend": "webpack --config ./frontend/webpack.config.js"
   },
   "author": "",
